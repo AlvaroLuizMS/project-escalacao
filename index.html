@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Escalação</title>
+</head>
+
+<body>
+    <div class="main">
+        <!-- MODAL SET YOUR TEAM-->
+        <div class="modal-extern-flex-box">
+            <button id="btn-open" class="btn-modal" onclick="openModal()">Escalar time</button>
+            <button class="btn-modal" id="btn-delete" onclick="cleanTeam()">Deletar time</button>
+            <div class="modal" id="modal">
+                <button id="btn-close" class="btn-exit" onclick="closeModal()"> X </button>
+                <div class="main-modal">
+                    <h4 class="title-modal">Selecione seu esquema tático</h4>
+                    <div class="select-escalacao">
+                        <span id="display-selecao" class="formacao"> entre 1 e 5</span>
+                        <input type="range" min="0" max="5" value="0" id="in-select" required>
+                        <p class="range"></p>
+                        <button class="btn-confirm" onclick="confirmTatic()">OK</button>
+                    </div>
+                    <div class="list-players">
+                        <ul id="list-players">
+
+                        </ul>
+                    </div>
+                    <button id="create-team" class="create-team" onclick="escalarTeam()"> Escalar </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim MODAL -->
+        <div id="display-camp" class="campo">
+            <div class="areas">
+                <div class="posicoes">
+                    <div class="ataque">
+                        <div id="display-initial" class="ataque-left">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="ataque-left"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="ataque-center">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="ataque-center"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="ataque-right">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="ataque-right"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ataque-recuado">
+                        <div id="display-initial" class="ataque-back">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="ataque-back"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mid-camp">
+                        <div id="display-initial" class="left-mid-one">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="left-mid-one"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="left-mid-two">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="left-mid-two"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="center-mid">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="center-mid"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="right-mid-one">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="right-mid-one"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="right-mid-two">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="right-mid-two"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="defesa">
+                        <div id="display-initial" class="left-back-one">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="left-back-one"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="left-back-two">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="left-back-two"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="center-back">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="center-back"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="right-back-one">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="right-back-one"> </span>
+                            </div>
+                        </div>
+                        <div id="display-initial" class="right-back-two">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="right-back-two"> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gol">
+                        <div id="display-initial" class="gol">
+                            <div class="player">
+                                <img src="models/player-icon.png" alt="player" class="player-icon">
+                                <span class="name" id="gol"> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config/config.js"></script>
+</body>
+
+</html>

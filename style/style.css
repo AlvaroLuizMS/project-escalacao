@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 1311px 720px;
+    background-repeat: no-repeat;
+    background-image: url('/models/Vecteezysoccer-stadium-vector-backgroundws0621_generated.jpg');
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div.main {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.campo {
+    width: 370px;
+    height: 530px;
+    display: flex;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-size: 370px 530px;
+    background-image: url(/models/campo-fundo.png);
+}
+
+div.areas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.posicoes {
+    margin: 0;
+    width: 370px;
+    display: grid;
+    height: 530px;
+}
+
+img.player-icon {
+    width: 30px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.player {
+    width: 30px;
+    height: auto;
+    display: flex;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+div.ataque {
+    width: 70%;
+    height: auto;
+    display: flex;
+    font-weight: bold;
+    margin: 15% auto 0 auto;
+    justify-content: space-around;
+}
+
+div.ataque-recuado {
+    width: 70%;
+    height: auto;
+    display: flex;
+    font-weight: bold;
+    position: relative;
+    margin: 20px auto 0 auto;
+    justify-content: center;
+}
+
+div.mid-camp {
+    width: 83%;
+    height: auto;
+    display: flex;
+    margin: 5% auto 0 auto;
+    justify-content: space-around;
+}
+
+div.defesa {
+    width: 85%;
+    height: auto;
+    display: flex;
+    margin: 20% auto 0 auto;
+    justify-content: space-around;
+}
+
+div.gol {
+    width: 75%;
+    height: auto;
+    display: flex;
+    margin: 0 auto 5px auto;
+    justify-content: center;
+}
+
+/* MODAL */
+
+button.btn-modal {
+    width: auto;
+    height: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgb(71, 71, 71);
+    margin: 30px 20px 10px 20px;
+    border: 2px double #bebebe67;
+    background-color: rgba(241, 241, 241, 0.801);
+    box-shadow: 2px 2px 4px 0.1px rgba(46, 46, 46, 0.781);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div.modal-extern-flex-box {
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+div.modal {
+    z-index: 1;
+    width: 800px;
+    height: auto;
+    display: none;
+    color: #929292;
+    border-radius: 6px;
+    position: absolute;
+    margin: 5px auto 0 auto;
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    box-shadow: 3px 5px 5px 1px #3636361c;
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+h4.title-modal {
+    margin: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p.range {
+    margin: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button.btn-confirm {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.39);
+    border: 1px solid rgba(136, 136, 136, 0.021);
+}
+
+button.btn-exit {
+    border: none;
+    float: right;
+    color: #fff;
+    font-size: 25px;
+    margin: 10px 15px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.select-escalacao {
+    padding: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto 10px auto;
+}
+
+span.formacao {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input#in-select {
+    width: 150px;
+    height: 10px;
+    outline: none;
+    border-radius: 9px;
+    margin: 15px auto 0 auto;
+    background: #bebebe;
+    -webkit-appearance: none;
+}
+
+#in-select::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    background: rgb(255, 255, 255);
+}
+
+ul#list-players {
+    display: grid;
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    grid-template-rows: 78px;
+    grid-template-columns: 50% 50%;
+}
+
+li.li-gol {
+    grid-column-end: 3;
+    grid-column-start: 1;
+}
+
+input#gol {
+    width: 200px;
+    height: 25px;
+}
+
+.verify {
+    width: 200px;
+    height: 25px;
+    border: 1px #bebebe;
+    margin: 10px 0 0 10px;
+    box-shadow: 2px 3px 4px 1px rgba(104, 104, 104, 0.603);
+}
+
+div.main-modal {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul>li {
+    padding: 0;
+    list-style: none;
+    margin: 10px 50px;
+    text-decoration: none;
+}
+
+li>input {
+    border: none;
+    border-radius: 5px;
+}
+
+button.create-team {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    color: #858585;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 20px auto 20px auto;
+    border: 1px solid #bebebe;
+    background-color: rgba(255, 255, 255, 0.678);
+    box-shadow: 2px 3px 4px 1px rgba(0, 0, 0, 0.356);
+}
