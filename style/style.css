@@ -5,7 +5,7 @@ body {
     height: 100%;
     background-size: 1311px 720px;
     background-repeat: no-repeat;
-    background-image: url('/models/Vecteezysoccer-stadium-vector-backgroundws0621_generated.jpg');
+    background-image: url('../models/Vecteezysoccer-stadium-vector-backgroundws0621_generated.jpg');
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -27,7 +27,7 @@ div.campo {
     align-items: center;
     justify-content: center;
     background-size: 370px 530px;
-    background-image: url(/models/campo-fundo.png);
+    background-image: url('../models/campo-fundo.png');
 }
 
 div.areas {
