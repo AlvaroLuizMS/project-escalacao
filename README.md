@@ -1,5 +1,5 @@
 # Projeto escalação
-Projeto para fins de estudo 
+Projeto estudantil 
 
 Descrição
 
